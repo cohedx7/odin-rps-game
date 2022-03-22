@@ -1,0 +1,17 @@
+h2 {
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    border-radius: 24px;
+    border-style: none;
+    font-size: 24px;
+    padding: 24px;
+    margin: 24px;
+    background: lightskyblue; 
+    color: white;
+}
