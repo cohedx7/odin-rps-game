@@ -2,8 +2,38 @@ h2 {
     text-align: center;
 }
 
+.text-color {
+    color: maroon;
+}
+
 .buttons {
     text-align: center;
+}
+
+.results {
+    text-align: center;
+    margin-top: -1.5em;
+    margin-bottom: -1em;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: -1em;
+    margin-bottom: -1.5em;
+}
+
+.direction {
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 button {
@@ -14,4 +44,9 @@ button {
     margin: 24px;
     background: lightskyblue; 
     color: white;
+}
+
+#announce {
+    color: purple;
+    font-style: italic;
 }
