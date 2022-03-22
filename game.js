@@ -10,24 +10,6 @@ function computerPlay() {
     }
 }
 
-// console.log(computerPlay());
-
-// ask player for his choice
-/* function askPlayer() {
-    const playerChoice = window.prompt("What is your choice: ");
-    if (playerChoice.toLowerCase() === "rock") {
-        alert("You chose Rock.");
-        return "rock";
-    } else if (playerChoice.toLowerCase() === "paper") {
-        alert("You chose Paper.");
-        return "paper";
-    } else {
-        alert ("You chose Scissors.");
-        return "scissors";
-    }
-}
-*/
-
 // commented out and called directly into game function...
 const computerSelection = computerPlay();
 
@@ -54,6 +36,47 @@ function playRound (playerSelection, computerSelection) {
     }
 }
 
+let playerSelection = "";
+let buttonRock = document.getElementById("rock");
+let buttonPaper = document.getElementById("paper");
+let buttonScissors = document.getElementById("scissors");
+
+let playerPlay = () => {
+    buttonRock.addEventListener('click', function() {
+        playerSelection = "rock";
+    });
+
+    buttonPaper.addEventListener('click', function() {
+        playerSelection = "paper";
+    });
+
+    buttonScissors.addEventListener('click', function() {
+        playerSelection = "scissors";
+    });
+}
+
+console.log(playerPlay());
+computerPlay();
+
+
+// console.log(computerPlay());
+
+// ask player for his choice
+/* function askPlayer() {
+    const playerChoice = window.prompt("What is your choice: ");
+    if (playerChoice.toLowerCase() === "rock") {
+        alert("You chose Rock.");
+        return "rock";
+    } else if (playerChoice.toLowerCase() === "paper") {
+        alert("You chose Paper.");
+        return "paper";
+    } else {
+        alert ("You chose Scissors.");
+        return "scissors";
+    }
+}
+*/
+
 // console.log(playRound(playerSelection, computerSelection));
 
 /* call playRound function 5 times and update/show score after each round
@@ -77,24 +100,3 @@ function game() {
 
 game();
 */
-
-let playerSelection = "";
-let buttonRock = document.getElementById("rock");
-let buttonPaper = document.getElementById("paper");
-let buttonScissors = document.getElementById("scissors");
-
-function playerPlay() {
-    buttonRock.addEventListener('click', function() {
-        playerSelection = "rock";
-    });
-
-    buttonPaper.addEventListener('click', function() {
-        playerSelection = "paper";
-    });
-
-    buttonScissors.addEventListener('click', function() {
-        playerSelection = "scissors";
-    });
-}
-
-console.log(playRound(playerPlay, computerSelection));
