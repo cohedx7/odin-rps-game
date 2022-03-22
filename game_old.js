@@ -10,8 +10,27 @@ function computerPlay() {
     }
 }
 
-// commented out and called directly into game function...
+// console.log(computerPlay());
+
+// ask player for his choice
+function askPlayer() {
+    const playerChoice = window.prompt("What is your choice: ");
+    if (playerChoice.toLowerCase() === "rock") {
+        alert("You chose Rock.");
+        return "rock";
+    } else if (playerChoice.toLowerCase() === "paper") {
+        alert("You chose Paper.");
+        return "paper";
+    } else {
+        alert ("You chose Scissors.");
+        return "scissors";
+    }
+}
+
+/* commented out and called directly into game function...
 const computerSelection = computerPlay();
+const playerSelection = askPlayer();
+*/
 
 let playerScore = 0;
 let computerScore = 0;
@@ -31,57 +50,15 @@ function playRound (playerSelection, computerSelection) {
         return "You won! Paper beats rock.";
     } else {
         computerScore++;
-        const capitalized = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
-        return `You lost! ${capitalized} beats ${playerSelection}.`;
+        const capitalize = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
+        return `You lost! ${capitalize} beats ${playerSelection}.`;
     }
 }
-
-let playerSelection = "";
-let buttonRock = document.getElementById("rock");
-let buttonPaper = document.getElementById("paper");
-let buttonScissors = document.getElementById("scissors");
-
-let playerPlay = () => {
-    buttonRock.addEventListener('click', function() {
-        playerSelection = "rock";
-    });
-
-    buttonPaper.addEventListener('click', function() {
-        playerSelection = "paper";
-    });
-
-    buttonScissors.addEventListener('click', function() {
-        playerSelection = "scissors";
-    });
-}
-
-console.log(playerPlay());
-computerPlay();
-
-
-// console.log(computerPlay());
-
-// ask player for his choice
-/* function askPlayer() {
-    const playerChoice = window.prompt("What is your choice: ");
-    if (playerChoice.toLowerCase() === "rock") {
-        alert("You chose Rock.");
-        return "rock";
-    } else if (playerChoice.toLowerCase() === "paper") {
-        alert("You chose Paper.");
-        return "paper";
-    } else {
-        alert ("You chose Scissors.");
-        return "scissors";
-    }
-}
-*/
 
 // console.log(playRound(playerSelection, computerSelection));
 
 /* call playRound function 5 times and update/show score after each round
    + display message after game is over according to end result */
-/*
 function game() {
     for (let i = 0; i < 5; i++) {
         const computerSelection = computerPlay();
@@ -99,4 +76,3 @@ function game() {
 }
 
 game();
-*/
